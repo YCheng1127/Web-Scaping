@@ -1,0 +1,38 @@
+1531912314626	geckodriver	INFO	geckodriver 0.21.0
+1531912314633	geckodriver	INFO	Listening on 127.0.0.1:50893
+1531912314668	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.HBwBVfVnPnnM"
+Error: no DISPLAY environment variable specified
+1531912545017	geckodriver	INFO	geckodriver 0.21.0
+1531912545025	geckodriver	INFO	Listening on 127.0.0.1:51215
+1531912545069	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.t9FuAWWnURu1"
+*** You are running in headless mode.
+1531912548590	Marionette	INFO	Listening on port 51222
+1531912548896	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://opinion.udn.com/opinion/story/6685/2144401, line 264: TypeError: getCookie(...) is undefined
+1531912653667	geckodriver	INFO	geckodriver 0.21.0
+1531912653674	geckodriver	INFO	Listening on 127.0.0.1:51515
+1531912653704	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.1zIBnUcn3pO4"
+*** You are running in headless mode.
+1531912655470	Marionette	INFO	Listening on port 51520
+1531912655821	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://opinion.udn.com/opinion/story/6685/2144401, line 264: TypeError: getCookie(...) is undefined
+1531912729628	geckodriver	INFO	geckodriver 0.21.0
+1531912729635	geckodriver	INFO	Listening on 127.0.0.1:51793
+1531912729667	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.qMGWEGUJkhSX"
+*** You are running in headless mode.
+1531912731447	Marionette	INFO	Listening on port 51798
+1531912731793	Marionette	WARN	TLS certificate errors will be ignored for this session
+1531912836141	geckodriver	INFO	geckodriver 0.21.0
+1531912836149	geckodriver	INFO	Listening on 127.0.0.1:51989
+1531912836189	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.eUlzUuJ7JOGp"
+*** You are running in headless mode.
+1531912838001	Marionette	INFO	Listening on port 51994
+1531912838309	Marionette	WARN	TLS certificate errors will be ignored for this session
+1531914827323	geckodriver	INFO	geckodriver 0.21.0
+1531914827336	geckodriver	INFO	Listening on 127.0.0.1:54261
+1531914827858	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.CgPvrWCJraMl"
+Error: no DISPLAY environment variable specified
+1531924998128	geckodriver	INFO	geckodriver 0.21.0
+1531924998155	geckodriver	INFO	Listening on 127.0.0.1:58890
+1531924998226	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.6lYtQNKo6RJ0"
+Error: no DISPLAY environment variable specified
