@@ -127,20 +127,27 @@ def tide_lyric(tok):
 
 #fetch lyrics
 def fetch_lyrics(lyric):
-	res = requests.get(lyric.href, headers = headers, timeout = 10)
+	try:
+		res = requests.get(lyric.href, headers = headers, timeout = 10)
+		
+	except requests.exceptions.ConnectionError:
+		print("ConnectionError -- please wait 3 seconds")
+		time.sleep(3)
+	
 	soup = bs4(res.text, "html.parser")
 	D = soup.find(id = "fsZx3")
 	
 	try:
 		D_process = tide_lyric(D)
-		print("歌名: " + lyric.name)
-		print(D_process)
 	except AttributeError:
 		print("cannot get text of id(fsZx3)")
 		return "cannot get text of id(fsZx3)"
-	else:
+	else:	
+		print("歌名: " + lyric.name)
+		print(D_process)
 		return "歌名: " + lyric.name + "\n" + D_process
 #fetch_lyrics("https://mojim.com/twy102201x9x16.htm") 測試function
+Singer_record = []
 
 f = open("lyric.txt", "w")
 num = 1
@@ -148,12 +155,21 @@ alphabet_href = get_Boy_singer_alphabet_href()
 for rat in alphabet_href:
 	singerlist = get_singer_list(rat)
 	for cow in singerlist:
-		songlist = get_Song_pointer(cow)
+		syn = 0
+		for detect_repeat in Singer_record:
+			if detect_repeat == cow.name:
+				syn = syn + 1
+		if syn == 0:	
+			songlist = get_Song_pointer(cow)
+			Singer_record.append(cow.name)
+
 		for tiger in songlist:
-			print("\n" + str(num) +  ".\n" + "歌手: " + cow.name)
-			f.write('\n' + str(num) + '.\n'  + "歌手: " + cow.name + '\n')
-			f.write(fetch_lyrics(tiger))
-			num = num + 1
+			outcome = fetch_lyrics(tiger)
+			if len(outcome) > 50:
+				print("\n" + str(num) +  ".\n" + "歌手: " + cow.name)
+				f.write("\n" + str(num) + ".\n" + "歌手: " + cow.name + "\n")
+				f.write(outcome)
+				num = num + 1
 
 #SS = singerandhref.songandhref("你們要快樂", "https://mojim.com/twy102201x9x16.htm")
 #fetch_lyrics(SS)
